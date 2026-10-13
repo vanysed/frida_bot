@@ -1,0 +1,9 @@
+.env
+state.json
+bookings.json
+bot.log
+.digest
+.avatar_done
+__pycache__/
+*.jpg
+!avatar.jpg

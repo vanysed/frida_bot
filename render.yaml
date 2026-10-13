@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: frida-bot
+    runtime: python
+    plan: free
+    buildCommand: echo "зависимостей нет"
+    startCommand: python bot.py
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      - key: SKIP_AVATAR
+        value: "1"
+      - key: OWNER_CODE
+        value: frida2026
+      # секреты вводятся вручную в панели Render, в код они не попадают
+      - key: BOT_TOKEN
+        sync: false
+      - key: DATABASE_URL
+        sync: false
